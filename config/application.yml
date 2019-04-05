@@ -1,0 +1,36 @@
+server:
+  port: ${PORT:8080}
+
+encryption:
+  key: thisisa128bitkey
+
+security:
+  jwt:
+    secret: ThisIsAnExample
+    expiration-time: 14000000
+    token-prefix: Bearer
+    header-prefix: Authorization
+    authorities: authorities
+
+spring:
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      show_sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/keenon
+    username: keenon
+    password: keenon2017
+    initialSize: 1
+    maxActive: 10
+    maxIdle: 5
+    maxAge: 3600000 # One hour
+    validationQuery: "SELECT 1"
+    validationQueryTimeout: 1
+    removeAbandoned: true
+    removeAbandonedTimeout: 200
+    testOnBorrow: true
