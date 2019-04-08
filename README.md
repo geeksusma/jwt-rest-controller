@@ -10,7 +10,8 @@
   	"password": "password"
   }
 
-  You can use PostMan, curl or just open the code in your favourite IDE and checking the "test-integration" folder. There you can find some Spring Boot Tests to check the app.
+  You can use PostMan, curl or just open the code in your favourite IDE and checking the "test-integration" folder. There you can find some Spring Boot Tests to check the app. For example, the curl command is as follows:
+  curl --header "Content-Type: application/json"  --request POST  --data '{"username":"test@geeksusma.es","password":"password"}'  http://localhost:8080/login
 
   ### Tech
 
